@@ -152,6 +152,35 @@ header.navigation {
   width: 100%;
   z-index: 999;
 
+  .deprecation-banner {
+    border-left-width: 10px;
+    padding-top: 10px;
+    border-left-style: solid;
+    background-color: #fbdc53;
+    border-image: repeating-linear-gradient(
+                      -30deg,
+                      #000,
+                      #000 5px,
+                      #ffb101 5px,
+                      #ffb101 10px
+    ) 20;
+
+    a {
+      color: blue;
+    }
+
+    p {
+      margin-left: 10px;
+      margin-top: 0;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid darken($navigation-background, 10);
+    }
+  }
+
   .navigation-wrapper {
     @include clearfix;
     position: relative;
